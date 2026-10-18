@@ -1,0 +1,11 @@
+{
+    "scope": "x_caresetu_ai",
+    "scopeId": "0336010b358446838d92f98030f1589c",
+    "name": "CareSetu AI",
+    "staticContent": {
+        "buildDir": "dist/static",
+        "paths": {
+            "src/client/*.html": "dist/static/*.html"
+        }
+    }
+}

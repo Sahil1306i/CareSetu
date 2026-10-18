@@ -1,0 +1,335 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1128"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#162032"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="lifeArrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#14B8A6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Header -->
+  <g transform="translate(60, 40)">
+    <text x="0" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF">CareSetu AI — Discharge Coordination Lifecycle</text>
+    <text x="0" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="400" fill="#94A3B8">Closed-loop progression from inpatient admission through blocker discovery, automated chasing, risk elevation, approved action, and safe discharge</text>
+  </g>
+
+  <!-- 8 LIFECYCLE STAGES ARRANGED IN TWO TIERS OF 4 STAGES -->
+  <!-- TIER 1: STAGES 1 TO 4 (Left to Right, y: 115 to 495) -->
+  <g transform="translate(60, 115)">
+    
+    <!-- Stage 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="415" height="380" rx="14" fill="#0F172A" stroke="#1E4E79" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <rect width="415" height="42" rx="14" fill="#1E3A8A"/>
+      <text x="18" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">STAGE 1: ADMISSION &amp; BASELINE</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#38BDF8">Inpatient Record Registered</text>
+        <text x="0" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Encounter created in x_caresetu_ai_encounter</text>
+        <text x="0" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Bed assigned (e.g. CCU Bed 304, Post-Op)</text>
+        <text x="0" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• promised_discharge_time deadline scheduled</text>
+      </g>
+
+      <g transform="translate(18, 150)">
+        <rect width="379" height="110" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34D399">Initial Operational Baseline</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Risk Score = 0 (Normal Tier, Green)</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Predicted Delay = 0 minutes</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Open Blockers = 0 | Unack Handoffs = 0</text>
+        <text x="14" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#38BDF8">Schedule: On-Track</text>
+      </g>
+
+      <g transform="translate(18, 272)">
+        <rect width="379" height="92" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#CBD5E1">Platform State:</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Green triage badge in Command Center</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Promised discharge countdown initiated</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Zero operational escalation</text>
+      </g>
+    </g>
+
+    <!-- Connector 1 -> 2 -->
+    <line x1="420" y1="190" x2="455" y2="190" stroke="#14B8A6" stroke-width="3" marker-end="url(#lifeArrow)"/>
+
+    <!-- Stage 2 -->
+    <g transform="translate(460, 0)">
+      <rect width="415" height="380" rx="14" fill="#0F172A" stroke="#1E4E79" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <rect width="415" height="42" rx="14" fill="#1E3A8A"/>
+      <text x="18" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">STAGE 2: DEPENDENCIES &amp; SIGNALS</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#38BDF8">Operational Bottlenecks Emerge</text>
+        <text x="0" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Clinical milestone pending (Cardiology sign-off)</text>
+        <text x="0" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• TPA Pre-auth claim initiated with insurer</text>
+        <text x="0" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Nursing shift change creates pending handoff</text>
+      </g>
+
+      <g transform="translate(18, 150)">
+        <rect width="379" height="110" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FBBF24">Emerging Bottlenecks Logged</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Record created in x_caresetu_ai_tpa_case</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Record created in x_caresetu_ai_handoff</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Initial SLA countdown timers activated</text>
+        <text x="14" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#F59E0B">Target: 30m Ack SLA / 15m TPA Chase</text>
+      </g>
+
+      <g transform="translate(18, 272)">
+        <rect width="379" height="92" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#CBD5E1">Platform State:</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Dynamic counters update across pipeline</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Scheduled jobs monitor SLA compliance</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Encounter 360 displays active dependencies</text>
+      </g>
+    </g>
+
+    <!-- Connector 2 -> 3 -->
+    <line x1="880" y1="190" x2="915" y2="190" stroke="#14B8A6" stroke-width="3" marker-end="url(#lifeArrow)"/>
+
+    <!-- Stage 3 -->
+    <g transform="translate(920, 0)">
+      <rect width="415" height="380" rx="14" fill="#0F172A" stroke="#1E4E79" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <rect width="415" height="42" rx="14" fill="#7C3AED"/>
+      <text x="18" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">STAGE 3: AUTONOMOUS CHASING</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#C084FC">Scheduled Engines Monitor SLAs</text>
+        <text x="0" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• TpaChaseEngine executes every 15 minutes</text>
+        <text x="0" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Transitions case: submitted -&gt; chasing</text>
+        <text x="0" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• HandoffEngine monitors 30m acknowledgment</text>
+      </g>
+
+      <g transform="translate(18, 150)">
+        <rect width="379" height="110" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#F87171">SLA Breach Detected</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Insurer crosses 45m response threshold</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Handoff pending past critical threshold</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Engine generates x_caresetu_ai_blocker</text>
+        <text x="14" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#F87171">Category: 'tpa_insurance', Severity: 'high'</text>
+      </g>
+
+      <g transform="translate(18, 272)">
+        <rect width="379" height="92" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#CBD5E1">Platform State:</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Blocker created linked to encounter</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Triggers async recalculation event</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Audit log captures chase timestamp</text>
+      </g>
+    </g>
+
+    <!-- Connector 3 -> 4 -->
+    <line x1="1340" y1="190" x2="1375" y2="190" stroke="#14B8A6" stroke-width="3" marker-end="url(#lifeArrow)"/>
+
+    <!-- Stage 4 -->
+    <g transform="translate(1380, 0)">
+      <rect width="420" height="380" rx="14" fill="#0F172A" stroke="#1E4E79" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <rect width="420" height="42" rx="14" fill="#D97706"/>
+      <text x="18" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">STAGE 4: RESCORING &amp; ESCALATION</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#F59E0B">Continuous Urgency Sync</text>
+        <text x="0" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• compute-risk-async Business Rule executes</text>
+        <text x="0" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• OperationalRiskEngine rescores: 75 pts</text>
+        <text x="0" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• DischargePredictionEngine adds: +45m delay</text>
+      </g>
+
+      <g transform="translate(18, 150)">
+        <rect width="384" height="110" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#F87171">High Risk Threshold Breach (&gt;= 60)</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Tier transitions: Normal -&gt; High (Orange)</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• System creates x_caresetu_ai_escalation</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Bed elevated to top of Command Center triage</text>
+        <text x="14" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#FBBF24">predicted_discharge_time delayed +45m</text>
+      </g>
+
+      <g transform="translate(18, 272)">
+        <rect width="384" height="92" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#CBD5E1">Platform State:</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Orange high-urgency alert visible to staff</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Encounter 360 displays active blocker badge</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Discharge timeline projection shifted</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Connectors Tier 1 -> Tier 2 (Looping Back from Right to Left) -->
+  <path d="M 1590 500 L 1590 535 L 260 535 L 260 565" fill="none" stroke="#14B8A6" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#lifeArrow)"/>
+
+  <!-- TIER 2: STAGES 5 TO 8 (y: 575 to 955) -->
+  <g transform="translate(60, 575)">
+    
+    <!-- Stage 5 -->
+    <g transform="translate(0, 0)">
+      <rect width="415" height="380" rx="14" fill="#0F172A" stroke="#1E4E79" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <rect width="415" height="42" rx="14" fill="#0D9488"/>
+      <text x="18" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">STAGE 5: AI ROOT CAUSE DIAGNOSIS</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#2DD4BF">Grounded AI Coordinator Query</text>
+        <text x="0" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Staff asks: "What is holding up Bed 304?"</text>
+        <text x="0" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• AICoordinatorEngine aggregates live context</text>
+        <text x="0" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Explains root cause: TPA pre-auth unresponded</text>
+      </g>
+
+      <g transform="translate(18, 150)">
+        <rect width="379" height="110" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FBBF24">Formulates Action Proposal</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Evaluates allowlist: 'chase_tpa' is valid</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Creates record in x_caresetu_action_req</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• State: 'proposed', Approval: 'pending'</text>
+        <text x="14" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#2DD4BF">UI renders Action Card with Rationale</text>
+      </g>
+
+      <g transform="translate(18, 272)">
+        <rect width="379" height="92" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#CBD5E1">Safety Guard:</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Zero autonomous mutation occurs</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Target tables remain strictly untouched</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">System waits for authorized staff review</text>
+      </g>
+    </g>
+
+    <!-- Connector 5 -> 6 -->
+    <line x1="420" y1="190" x2="455" y2="190" stroke="#14B8A6" stroke-width="3" marker-end="url(#lifeArrow)"/>
+
+    <!-- Stage 6 -->
+    <g transform="translate(460, 0)">
+      <rect width="415" height="380" rx="14" fill="#0F172A" stroke="#1E4E79" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <rect width="415" height="42" rx="14" fill="#059669"/>
+      <text x="18" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">STAGE 6: HUMAN-APPROVED ACTION</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#34D399">Staff Reviews Proposal</text>
+        <text x="0" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Clinical coordinator inspects suggested action</text>
+        <text x="0" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Evaluates impact: Clears 45-min delay</text>
+        <text x="0" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Staff clicks "Approve &amp; Execute" button</text>
+      </g>
+
+      <g transform="translate(18, 150)">
+        <rect width="379" height="110" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#38BDF8">Secure Execution Handshake</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• POST /api/x_caresetu_ai/actions/execute</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Role check: x_caresetu_ai.coordinator</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Server re-validates target state &amp; locks</text>
+        <text x="14" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#34D399">ActionExecutionEngine executes allowlisted fix</text>
+      </g>
+
+      <g transform="translate(18, 272)">
+        <rect width="379" height="92" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#CBD5E1">Audit Trail:</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">executed_by, executed_at, result logged</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Idempotency guard prevents double-run</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Action transitions: proposed -&gt; executed</text>
+      </g>
+    </g>
+
+    <!-- Connector 6 -> 7 -->
+    <line x1="880" y1="190" x2="915" y2="190" stroke="#14B8A6" stroke-width="3" marker-end="url(#lifeArrow)"/>
+
+    <!-- Stage 7 -->
+    <g transform="translate(920, 0)">
+      <rect width="415" height="380" rx="14" fill="#0F172A" stroke="#1E4E79" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <rect width="415" height="42" rx="14" fill="#059669"/>
+      <text x="18" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">STAGE 7: RESOLUTION &amp; CASCADE</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#34D399">Operational Blocker Cleared</text>
+        <text x="0" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• TPA clearance confirmed &amp; logged</text>
+        <text x="0" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Blocker status transitions to 'resolved'</text>
+        <text x="0" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Open blocker count decrements: 1 -&gt; 0</text>
+      </g>
+
+      <g transform="translate(18, 150)">
+        <rect width="379" height="110" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34D399">Cascade Normalization Triggered</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Business rules re-run automatically</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Risk Score drops from 75 to 20 (Normal)</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Escalation record deactivated (active=false)</text>
+        <text x="14" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#38BDF8">45-minute projected delay removed from clock</text>
+      </g>
+
+      <g transform="translate(18, 272)">
+        <rect width="379" height="92" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#CBD5E1">Command Center UI:</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Bed badge returns to Normal (Green)</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Patient moves to "Discharge Ready" column</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748B">Real-time status synchronized for team</text>
+      </g>
+    </g>
+
+    <!-- Connector 7 -> 8 -->
+    <line x1="1340" y1="190" x2="1375" y2="190" stroke="#14B8A6" stroke-width="3" marker-end="url(#lifeArrow)"/>
+
+    <!-- Stage 8 -->
+    <g transform="translate(1380, 0)">
+      <rect width="420" height="380" rx="14" fill="#0F172A" stroke="#1E4E79" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <rect width="420" height="42" rx="14" fill="#047857"/>
+      <text x="18" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">STAGE 8: TIMELY DISCHARGE &amp; BED TURNOVER</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#34D399">Closed-Loop Success Achieved</text>
+        <text x="0" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Discharge summary &amp; meds handed over</text>
+        <text x="0" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Patient safely discharged on schedule</text>
+        <text x="0" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#E2E8F0">• Bed 304 marked available for turnover</text>
+      </g>
+
+      <g transform="translate(18, 150)">
+        <rect width="384" height="110" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34D399">Operational Impact Realized</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Prevents 6–8 hour hallway discharge delay</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Unblocks incoming emergency room transfer</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">• Complete end-to-end auditability preserved</text>
+        <text x="14" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6EE7B7">Encounter state transitions to 'discharged'</text>
+      </g>
+
+      <g transform="translate(18, 272)">
+        <rect width="384" height="92" rx="8" fill="#064E3B" stroke="#059669" stroke-width="1"/>
+        <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#A7F3D0">Outcome:</text>
+        <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6EE7B7">Zero clinical compromise</text>
+        <text x="14" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6EE7B7">Predictable, stress-free hospital departure</text>
+        <text x="14" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#A7F3D0">Optimized bed turnover velocity</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Lifecycle Summary Footer (y: 995 to 1055) -->
+  <g transform="translate(60, 995)">
+    <rect width="1800" height="50" rx="10" fill="#0A1128" stroke="#1E293B" stroke-width="1"/>
+    <g transform="translate(30, 20)">
+      <circle cx="10" cy="8" r="6" fill="#14B8A6"/>
+      <text x="24" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">1. Baseline Setup</text>
+      
+      <circle cx="210" cy="8" r="6" fill="#3B82F6"/>
+      <text x="224" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">2. Signal Discovery</text>
+
+      <circle cx="410" cy="8" r="6" fill="#7C3AED"/>
+      <text x="424" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">3. Autonomous Chasing</text>
+
+      <circle cx="610" cy="8" r="6" fill="#D97706"/>
+      <text x="624" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">4. Risk Elevation</text>
+
+      <circle cx="810" cy="8" r="6" fill="#0D9488"/>
+      <text x="824" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">5. AI Diagnosis</text>
+
+      <circle cx="1010" cy="8" r="6" fill="#059669"/>
+      <text x="1024" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">6. Human Approval</text>
+
+      <circle cx="1210" cy="8" r="6" fill="#10B981"/>
+      <text x="1224" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">7. Blocker Resolution</text>
+
+      <circle cx="1430" cy="8" r="6" fill="#34D399"/>
+      <text x="1444" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">8. Timely Bed Turnover</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,338 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1128"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#162032"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#14B8A6"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#F59E0B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Grid Overlay -->
+  <g opacity="0.04" stroke="#FFFFFF" stroke-width="1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40"/>
+    </pattern>
+    <rect width="1920" height="1080" fill="url(#grid)"/>
+  </g>
+
+  <!-- Header Section -->
+  <g transform="translate(60, 40)">
+    <rect width="64" height="64" rx="14" fill="url(#tealGrad)"/>
+    <text x="32" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" text-anchor="middle">CS</text>
+    
+    <text x="84" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">CareSetu AI — Enterprise Architecture Overview</text>
+    <text x="84" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="400" fill="#94A3B8">ServiceNow Scoped Inpatient Operational Orchestration Engine (x_caresetu_ai)</text>
+    
+    <!-- Header Badges -->
+    <g transform="translate(1320, 10)">
+      <rect width="150" height="34" rx="17" fill="#132E48" stroke="#1E4E79" stroke-width="1"/>
+      <circle cx="18" cy="17" r="5" fill="#14B8A6"/>
+      <text x="32" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#38BDF8">Scope: x_caresetu_ai</text>
+      
+      <rect x="165" y="0" width="160" height="34" rx="17" fill="#1F2937" stroke="#374151" stroke-width="1"/>
+      <circle cx="183" cy="17" r="5" fill="#F59E0B"/>
+      <text x="197" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FCD34D">ServiceNow Utah/Xanadu</text>
+      
+      <rect x="340" y="0" width="140" height="34" rx="17" fill="#064E3B" stroke="#047857" stroke-width="1"/>
+      <circle cx="358" cy="17" r="5" fill="#34D399"/>
+      <text x="372" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#6EE7B7">Zero-Mutation AI</text>
+    </g>
+  </g>
+
+  <!-- LAYER 1: PRESENTATION & CLIENT LAYER (y: 130 to 285) -->
+  <g transform="translate(60, 130)">
+    <rect width="1800" height="150" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <rect width="1800" height="34" rx="14" fill="#1E293B"/>
+    <text x="24" y="23" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#38BDF8" letter-spacing="1">LAYER 1: PRESENTATION &amp; WORKFLOW UI (ServiceNow UI Page: x_caresetu_ai_command_center.do | React 18 SPA)</text>
+    
+    <!-- 5 UI Components -->
+    <g transform="translate(20, 48)">
+      <!-- Card 1 -->
+      <rect width="335" height="85" rx="8" fill="url(#cardGrad)" stroke="#1E4E79" stroke-width="1"/>
+      <text x="16" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Command Center Dashboard</text>
+      <text x="16" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Live Bed Triage, Urgency Tiers,</text>
+      <text x="16" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Pipeline Status &amp; Real-time Counters</text>
+      
+      <!-- Card 2 -->
+      <rect x="355" width="335" height="85" rx="8" fill="url(#cardGrad)" stroke="#1E4E79" stroke-width="1"/>
+      <text x="371" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Encounter 360 View</text>
+      <text x="371" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Patient Timeline, Discrete Signals,</text>
+      <text x="371" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Active Blockers, Handoffs &amp; Delay Clock</text>
+
+      <!-- Card 3 -->
+      <rect x="710" width="335" height="85" rx="8" fill="url(#cardGrad)" stroke="#0D9488" stroke-width="1"/>
+      <text x="726" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#14B8A6">AI Care Coordinator</text>
+      <text x="726" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Grounded Operational Briefing,</text>
+      <text x="726" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Root-Cause Attribution &amp; Action Proposals</text>
+
+      <!-- Card 4 -->
+      <rect x="1065" width="335" height="85" rx="8" fill="url(#cardGrad)" stroke="#D97706" stroke-width="1"/>
+      <text x="1081" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#F59E0B">Fix It For Me Action Cards</text>
+      <text x="1081" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Read-Only Proposed Actions with</text>
+      <text x="1081" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Rationale &amp; Human Approval Boundary</text>
+
+      <!-- Card 5 -->
+      <rect x="1420" width="340" height="85" rx="8" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
+      <text x="1436" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#E2E8F0">Emergency Operations</text>
+      <text x="1436" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Local Surge View &amp; Rapid Triage</text>
+      <text x="1436" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#CBD5E1">(Honest Boundary: No External Telemetry)</text>
+    </g>
+  </g>
+
+  <!-- Connectors Layer 1 -> Layer 2 -->
+  <g stroke="#14B8A6" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6">
+    <line x1="250" y1="280" x2="250" y2="305" marker-end="url(#arrowTeal)"/>
+    <line x1="600" y1="280" x2="600" y2="305" marker-end="url(#arrowTeal)"/>
+    <line x1="960" y1="280" x2="960" y2="305" marker-end="url(#arrowTeal)"/>
+    <line x1="1310" y1="280" x2="1310" y2="305" marker-end="url(#arrowTeal)"/>
+    <line x1="1670" y1="280" x2="1670" y2="305" marker-end="url(#arrowTeal)"/>
+  </g>
+
+  <!-- LAYER 2: API & SECURITY BOUNDARY (y: 310 to 450) -->
+  <g transform="translate(60, 310)">
+    <rect width="1800" height="135" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <rect width="1800" height="34" rx="14" fill="#1E293B"/>
+    <text x="24" y="23" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#10B981" letter-spacing="1">LAYER 2: SCOPED SCRIPTED REST APIS &amp; SECURITY ACCESS CONTROL (x_caresetu_ai/*)</text>
+    
+    <g transform="translate(20, 48)">
+      <!-- Security Card 1 -->
+      <rect width="425" height="72" rx="8" fill="url(#cardGrad)" stroke="#059669" stroke-width="1"/>
+      <text x="16" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#34D399">Scripted REST API Endpoints</text>
+      <text x="16" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">/encounters, /blockers, /handoffs, /tpa,</text>
+      <text x="16" y="61" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">/ai-coordinator, /actions/execute</text>
+
+      <!-- Security Card 2 -->
+      <rect x="445" width="425" height="72" rx="8" fill="url(#cardGrad)" stroke="#059669" stroke-width="1"/>
+      <text x="461" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#34D399">Role-Based Access Control (RBAC)</text>
+      <text x="461" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">x_caresetu_ai.admin (Full system config)</text>
+      <text x="461" y="61" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">x_caresetu_ai.coordinator (Approve/execute actions)</text>
+
+      <!-- Security Card 3 -->
+      <rect x="890" width="425" height="72" rx="8" fill="url(#cardGrad)" stroke="#059669" stroke-width="1"/>
+      <text x="906" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#34D399">Table &amp; Field Level ACLs</text>
+      <text x="906" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Read/Write ACLs on all 8 tables</text>
+      <text x="906" y="61" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Strict write boundary on execution state fields</text>
+
+      <!-- Security Card 4 -->
+      <rect x="1335" width="425" height="72" rx="8" fill="url(#cardGrad)" stroke="#D97706" stroke-width="1"/>
+      <text x="1351" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F59E0B">Server Authorization &amp; State Guards</text>
+      <text x="1351" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Re-query target state before execution</text>
+      <text x="1351" y="61" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Strict allowlist validation &amp; idempotency check</text>
+    </g>
+  </g>
+
+  <!-- Connectors Layer 2 -> Layer 3 -->
+  <g stroke="#14B8A6" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6">
+    <line x1="300" y1="445" x2="300" y2="470" marker-end="url(#arrowTeal)"/>
+    <line x1="750" y1="445" x2="750" y2="470" marker-end="url(#arrowTeal)"/>
+    <line x1="1200" y1="445" x2="1200" y2="470" marker-end="url(#arrowTeal)"/>
+    <line x1="1650" y1="445" x2="1650" y2="470" marker-end="url(#arrowTeal)"/>
+  </g>
+
+  <!-- LAYER 3: DETERMINISTIC OPERATIONAL SERVICES (y: 475 to 630) -->
+  <g transform="translate(60, 475)">
+    <rect width="1800" height="150" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <rect width="1800" height="34" rx="14" fill="#1E293B"/>
+    <text x="24" y="23" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F59E0B" letter-spacing="1">LAYER 3: DETERMINISTIC OPERATIONAL SERVICES (Scoped Script Includes)</text>
+    
+    <g transform="translate(20, 48)">
+      <!-- Engine 1 -->
+      <rect width="280" height="85" rx="8" fill="url(#cardGrad)" stroke="#1E4E79" stroke-width="1"/>
+      <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">OperationalRiskEngine</text>
+      <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">0-100 Deterministic Scoring</text>
+      <text x="14" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748B">Time, Tasks, Milestones, Handoffs</text>
+      <text x="14" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#38BDF8">Tiers: Normal, Med, High, Crit</text>
+
+      <!-- Engine 2 -->
+      <rect x="295" width="285" height="85" rx="8" fill="url(#cardGrad)" stroke="#1E4E79" stroke-width="1"/>
+      <text x="309" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">DischargePredictionEngine</text>
+      <text x="309" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Additive Delay Timeline Clock</text>
+      <text x="309" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748B">Promised Time + Category Delays</text>
+      <text x="309" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#38BDF8">Zero double-counting logic</text>
+
+      <!-- Engine 3 -->
+      <rect x="595" width="285" height="85" rx="8" fill="url(#cardGrad)" stroke="#1E4E79" stroke-width="1"/>
+      <text x="609" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">HandoffEngine</text>
+      <text x="609" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Shift Transition Governance</text>
+      <text x="609" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748B">30m Target Ack SLA Monitoring</text>
+      <text x="609" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#38BDF8">Auto-chaser reminder &amp; blocker sync</text>
+
+      <!-- Engine 4 -->
+      <rect x="895" width="285" height="85" rx="8" fill="url(#cardGrad)" stroke="#1E4E79" stroke-width="1"/>
+      <text x="909" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">TpaChaseEngine</text>
+      <text x="909" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Insurance Pre-Auth Lifecycle</text>
+      <text x="909" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748B">15m / 30m / 45m Follow-up SLA</text>
+      <text x="909" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#38BDF8">Auto-chasing state machine</text>
+
+      <!-- Engine 5 -->
+      <rect x="1195" width="285" height="85" rx="8" fill="url(#cardGrad)" stroke="#0D9488" stroke-width="1"/>
+      <text x="1209" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#14B8A6">AICoordinatorEngine</text>
+      <text x="1209" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Grounded Operational Synthesis</text>
+      <text x="1209" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748B">Context aggregator across all tables</text>
+      <text x="1209" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#2DD4BF">Formulates Fix It For Me proposals</text>
+
+      <!-- Engine 6 -->
+      <rect x="1495" width="265" height="85" rx="8" fill="url(#cardGrad)" stroke="#D97706" stroke-width="1"/>
+      <text x="1509" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F59E0B">ActionExecutionEngine</text>
+      <text x="1509" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Safe Mutation Dispatcher</text>
+      <text x="1509" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#64748B">6 Allowlisted Action Handlers</text>
+      <text x="1509" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#FBBF24">Enforces approval &amp; audits result</text>
+    </g>
+  </g>
+
+  <!-- Connectors Layer 3 -> Layer 4 -->
+  <g stroke="#14B8A6" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6">
+    <line x1="200" y1="625" x2="200" y2="650" marker-end="url(#arrowTeal)"/>
+    <line x1="500" y1="625" x2="500" y2="650" marker-end="url(#arrowTeal)"/>
+    <line x1="800" y1="625" x2="800" y2="650" marker-end="url(#arrowTeal)"/>
+    <line x1="1100" y1="625" x2="1100" y2="650" marker-end="url(#arrowTeal)"/>
+    <line x1="1400" y1="625" x2="1400" y2="650" marker-end="url(#arrowTeal)"/>
+    <line x1="1700" y1="625" x2="1700" y2="650" marker-end="url(#arrowTeal)"/>
+  </g>
+
+  <!-- LAYER 4: SCOPED DATA MODEL (y: 655 to 810) -->
+  <g transform="translate(60, 655)">
+    <rect width="1800" height="150" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <rect width="1800" height="34" rx="14" fill="#1E293B"/>
+    <text x="24" y="23" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#38BDF8" letter-spacing="1">LAYER 4: SCOPED DATA MODEL &amp; PERSISTENCE (ServiceNow Scoped Tables: x_caresetu_ai_*)</text>
+    
+    <g transform="translate(20, 48)">
+      <!-- Table 1 -->
+      <rect width="240" height="85" rx="8" fill="url(#cardGrad)" stroke="#1E4E79" stroke-width="1"/>
+      <text x="14" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">..._encounter</text>
+      <text x="14" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Inpatient Master Record</text>
+      <text x="14" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">Bed, Promised/Exp Time,</text>
+      <text x="14" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#38BDF8">Risk Tier, Dynamic Counters</text>
+
+      <!-- Table 2 -->
+      <rect x="255" width="240" height="85" rx="8" fill="url(#cardGrad)" stroke="#1E4E79" stroke-width="1"/>
+      <text x="269" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">..._blocker</text>
+      <text x="269" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Operational Blockers</text>
+      <text x="269" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">Category (TPA, Transport...)</text>
+      <text x="269" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#38BDF8">Severity, Owner, Status</text>
+
+      <!-- Table 3 -->
+      <rect x="510" width="240" height="85" rx="8" fill="url(#cardGrad)" stroke="#1E4E79" stroke-width="1"/>
+      <text x="524" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">..._handoff</text>
+      <text x="524" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Shift Transition Records</text>
+      <text x="524" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">From/To Dept, Role, SBAR,</text>
+      <text x="524" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#38BDF8">Status: pending / acknowledged</text>
+
+      <!-- Table 4 -->
+      <rect x="765" width="240" height="85" rx="8" fill="url(#cardGrad)" stroke="#1E4E79" stroke-width="1"/>
+      <text x="779" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">..._tpa_case</text>
+      <text x="779" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Insurance Case Tracker</text>
+      <text x="779" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">TPA Name, Claim #, Status,</text>
+      <text x="779" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#38BDF8">Chase count, Follow-up SLA</text>
+
+      <!-- Table 5 -->
+      <rect x="1020" width="240" height="85" rx="8" fill="url(#cardGrad)" stroke="#1E4E79" stroke-width="1"/>
+      <text x="1034" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">..._escalation</text>
+      <text x="1034" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">High/Crit Risk Triggers</text>
+      <text x="1034" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">Linked to Encounter,</text>
+      <text x="1034" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#38BDF8">Active flag, Escalation reason</text>
+
+      <!-- Table 6 -->
+      <rect x="1275" width="240" height="85" rx="8" fill="url(#cardGrad)" stroke="#D97706" stroke-width="1"/>
+      <text x="1289" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#F59E0B">..._action_request</text>
+      <text x="1289" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Fix It For Me Actions</text>
+      <text x="1289" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">State: proposed/exec/done,</text>
+      <text x="1289" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#FBBF24">Approved By, Target ref, Audit</text>
+
+      <!-- Table 7 -->
+      <rect x="1530" width="230" height="85" rx="8" fill="url(#cardGrad)" stroke="#1E4E79" stroke-width="1"/>
+      <text x="1544" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">..._risk_score / pred</text>
+      <text x="1544" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Calculation Snapshots</text>
+      <text x="1544" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748B">Historical score audit logs,</text>
+      <text x="1544" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#38BDF8">Signal contributions, trends</text>
+    </g>
+  </g>
+
+  <!-- Connectors Layer 4 -> Layer 5 -->
+  <g stroke="#14B8A6" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6">
+    <line x1="300" y1="805" x2="300" y2="830" marker-end="url(#arrowTeal)"/>
+    <line x1="750" y1="805" x2="750" y2="830" marker-end="url(#arrowTeal)"/>
+    <line x1="1200" y1="805" x2="1200" y2="830" marker-end="url(#arrowTeal)"/>
+    <line x1="1650" y1="805" x2="1650" y2="830" marker-end="url(#arrowTeal)"/>
+  </g>
+
+  <!-- LAYER 5: AUTOMATION & INTEGRATION LAYER (y: 835 to 985) -->
+  <g transform="translate(60, 835)">
+    <rect width="1800" height="135" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <rect width="1800" height="34" rx="14" fill="#1E293B"/>
+    <text x="24" y="23" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#A855F7" letter-spacing="1">LAYER 5: AUTOMATION, EVENT SYNCHRONIZATION &amp; AI INTEGRATION BACKBONE</text>
+    
+    <g transform="translate(20, 48)">
+      <!-- Automation 1 -->
+      <rect width="425" height="72" rx="8" fill="url(#cardGrad)" stroke="#7C3AED" stroke-width="1"/>
+      <text x="16" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#C084FC">Async Business Rules</text>
+      <text x="16" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">compute-risk-async, blocker-recalc,</text>
+      <text x="16" y="61" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">sync-encounter-counters (Instant reactive rescoring)</text>
+
+      <!-- Automation 2 -->
+      <rect x="445" width="425" height="72" rx="8" fill="url(#cardGrad)" stroke="#7C3AED" stroke-width="1"/>
+      <text x="461" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#C084FC">Scheduled Script Executions</text>
+      <text x="461" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">TPA Auto-Chaser (Runs every 15 mins)</text>
+      <text x="461" y="61" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Handoff SLA Monitor (Runs periodically)</text>
+
+      <!-- Automation 3 -->
+      <rect x="890" width="425" height="72" rx="8" fill="url(#cardGrad)" stroke="#0D9488" stroke-width="1"/>
+      <text x="906" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#2DD4BF">Deterministic AI Coordinator Engine</text>
+      <text x="906" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Direct in-scope operational context aggregator</text>
+      <text x="906" y="61" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Grounds all briefing answers directly from tables</text>
+
+      <!-- Automation 4 -->
+      <rect x="1335" width="425" height="72" rx="8" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
+      <text x="1351" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#CBD5E1">Now Assist Skill Integration (Ready)</text>
+      <text x="1351" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">explain-risk-skill.now.ts defined in Fluent</text>
+      <text x="1351" y="61" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Graceful fallback active when sub-prod GenAI disabled</text>
+    </g>
+  </g>
+
+  <!-- Bottom Legend / Metadata (y: 995 to 1050) -->
+  <g transform="translate(60, 995)">
+    <rect width="1800" height="50" rx="10" fill="#0A1128" stroke="#1E293B" stroke-width="1"/>
+    
+    <g transform="translate(30, 20)">
+      <circle cx="10" cy="8" r="6" fill="#38BDF8"/>
+      <text x="24" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">Presentation Layer</text>
+
+      <circle cx="210" cy="8" r="6" fill="#10B981"/>
+      <text x="224" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">Security &amp; API Guards</text>
+
+      <circle cx="410" cy="8" r="6" fill="#F59E0B"/>
+      <text x="424" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">Deterministic Engine</text>
+
+      <circle cx="610" cy="8" r="6" fill="#2DD4BF"/>
+      <text x="624" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">AI Grounded Briefing</text>
+
+      <circle cx="810" cy="8" r="6" fill="#A855F7"/>
+      <text x="824" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#E2E8F0">Automation Backbone</text>
+      
+      <text x="1280" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Human-in-the-Loop Architecture | Zero Unapproved Mutation | Non-Clinical Scope</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "skills": {
+    "now-sdk": {
+      "source": "ServiceNow/sdk",
+      "ref": "master",
+      "sourceType": "github",
+      "skillPath": "skills/now-sdk/SKILL.md",
+      "computedHash": "942b7b6611b8cfb5be1c53561a158a50e388d230c7bab8935dc13353a8e32031"
+    }
+  }
+}

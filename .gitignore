@@ -1,0 +1,10 @@
+.DS_Store
+.now/
+dist/
+node_modules/
+target/
+*.tsbuildinfo
+.jest_cache
+.venv/
+__pycache__/
+*.pyc
